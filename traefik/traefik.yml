@@ -1,0 +1,30 @@
+# ============================================================
+# Traefik v3 — Configuration statique
+# Your Car Your Way — PoC
+# ============================================================
+
+api:
+  dashboard: true
+  insecure: true  # Dashboard accessible on: 8080 (dev only)
+
+entryPoints:
+  web:
+    address: ":80"
+  # En In production, enable HTTPS with Let's Encrypt:
+  # websecure:
+  #   address: ":443"
+  # certificatesResolvers:
+  #   letsencrypt:
+  #     acme:
+  #       email: admin@yourcaryourway.com
+  #       storage: /letsencrypt/acme.json
+  #       httpChallenge:
+  #         entryPoint: web
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: ycyw-poc_ycyw-network
+
+log:
+  level: INFO

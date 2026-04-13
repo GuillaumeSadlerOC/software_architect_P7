@@ -1,0 +1,28 @@
+# ── Backend (Java / Maven) ──
+backend/target/
+*.class
+*.jar
+*.war
+*.log
+.idea/
+*.iml
+
+# ── Frontend (Node.js / Next.js) ──
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# ── Docker ──
+pgdata/
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── IDE ──
+.vscode/
+*.swp
+*.swo
+
+# ── Security ──
+.env
